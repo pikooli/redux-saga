@@ -1,9 +1,9 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { incrementAsyncRequest } from "@/lib/redux/features/counter/saga";
+import { actionRequest, NAME } from "@/lib/redux/features/counter/saga";
 
 const slice = createSlice({
-  name: "counter",
+  name: NAME,
   initialState: {
     value: 0,
   },
@@ -20,9 +20,7 @@ const slice = createSlice({
   },
 });
 
-export const incrementAsync = () => ({
-  type: incrementAsyncRequest,
-});
+export const incrementAsync = actionRequest;
 
 export const { initializeCount, decrement, increment } = slice.actions;
 export default slice.reducer;
