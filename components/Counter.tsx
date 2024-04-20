@@ -20,7 +20,7 @@ export const Counter = () => {
       <h1 className="text-white text-3xl md:text-5xl font-bold text-center my-8">
         Counter with Redux Toolkit And Saga
       </h1>
-      <div className="space-y-4 py-8">
+      <div className="space-y-4 py-8 text-center">
         <button
           className="px-4 py-2 mx-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
           onClick={onIncrement}
